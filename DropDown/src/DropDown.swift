@@ -102,7 +102,7 @@ public final class DropDown: UIView {
 
 
 	/// The view to which the drop down will displayed onto.
-	public weak var anchorView: AnchorView? {
+    @objc public weak var anchorView: AnchorView? {
 		didSet { setNeedsUpdateConstraints() }
 	}
 
@@ -789,6 +789,12 @@ extension DropDown {
         return NSDictionary(dictionary: info)
     }
 	
+    
+    @objc public func objcShow()
+    {
+        self.show();
+    }
+    
 	/**
 	Shows the drop down if enough height.
 

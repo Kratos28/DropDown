@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "KratosDropDown"
-  s.version      = "2.3.12"
+  s.version      = "0.1.0"
   s.summary      = "修改版的Dropdown"
 
   # This description is used to generate tags and improve search results.
@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-                    修改版的Dropdown
+                    修改版的Dropdown DropdownDropdownDropdownDropdownDropdownDropdown
                    DESC
 
   s.homepage     = "https://github.com/Kratos28/DropDown"
@@ -38,7 +38,7 @@ Pod::Spec.new do |s|
   #  CocoaPods will detect a license file if there is a named LICENSE*
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
-
+  s.platform = :ios, '8.0'
   s.license      = "MIT"
   # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
 
@@ -99,7 +99,6 @@ Pod::Spec.new do |s|
 
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
- s.swift_version = '4.2'
   
 
 end
