@@ -120,7 +120,6 @@ class ViewController: UIViewController {
 		dropDowns.forEach {
 			/*** FOR CUSTOM CELLS ***/
 			$0.cellNib = UINib(nibName: "MyCell", bundle: nil)
-			
 			$0.customCellConfiguration = { (index: Index, item: String, cell: DropDownCell) -> Void in
 				guard let cell = cell as? MyCell else { return }
 				
