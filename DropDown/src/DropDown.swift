@@ -916,7 +916,7 @@ extension DropDown {
 	`dataSource`, `textColor`, `textFont`, `selectionBackgroundColor`
 	and `cellConfiguration` implicitly calls `reloadAllComponents()`.
 	*/
-	public func reloadAllComponents() {
+@objc public func reloadAllComponents() {
 		tableView.reloadData()
 		setNeedsUpdateConstraints()
 	}
