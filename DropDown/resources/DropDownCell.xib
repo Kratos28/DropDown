@@ -42,6 +42,7 @@
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="deleteButton" destination="VJ1-wj-5ib" id="fNB-ps-SS4"/>
                 <outlet property="optionLabel" destination="dhL-pA-i6q" id="1GT-db-EaA"/>
             </connections>
         </view>

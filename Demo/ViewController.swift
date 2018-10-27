@@ -94,17 +94,42 @@ class ViewController: UIViewController {
 	}
 	
 	func setupDefaultDropDown() {
-		DropDown.setupDefaultAppearance()
+//        DropDown.setupDefaultAppearance()
 		
+        let appearance = DropDown.appearance()
+        appearance.cellHeight = 60
+        appearance.backgroundColor = UIColor(white: 1, alpha: 1)
+        appearance.selectionBackgroundColor = UIColor(red: 0.6494, green: 0.8155, blue: 1.0, alpha: 0.2)
+        //        appearance.separatorColor = UIColor(white: 0.7, alpha: 0.8)
+        appearance.cornerRadius = 10
+        appearance.shadowColor = UIColor(white: 0.6, alpha: 1)
+        appearance.shadowOpacity = 0.9
+        appearance.shadowRadius = 25
+        appearance.animationduration = 0.25
+        appearance.textColor = .darkGray
+        
+        
 		dropDowns.forEach {
 			$0.cellNib = UINib(nibName: "DropDownCell", bundle: Bundle(for: DropDownCell.self))
-			$0.customCellConfiguration = nil
+            
+//            $0.customCellConfiguration = nil
+            $0.customCellConfiguration = { (index: Index, item: String, cell: DropDownCell) -> Void in
+//                guard let cell = cell as? DropDownCell else { return }
+                
+                // Setup your custom UI components
+//                cell.tintColor.setTitle(item, for: UIControlState.normal);
+                cell.deleteButton.addTarget(self, action: #selector(self.deleteClick), for: UIControlEvents.touchUpInside);
+            }
 		}
 	}
+    
+    @objc func deleteClick()  {
+        
+    }
+    
 	
 	func customizeDropDown(_ sender: AnyObject) {
 		let appearance = DropDown.appearance()
-		
 		appearance.cellHeight = 60
 		appearance.backgroundColor = UIColor(white: 1, alpha: 1)
 		appearance.selectionBackgroundColor = UIColor(red: 0.6494, green: 0.8155, blue: 1.0, alpha: 0.2)
@@ -116,15 +141,15 @@ class ViewController: UIViewController {
 		appearance.animationduration = 0.25
 		appearance.textColor = .darkGray
 //		appearance.textFont = UIFont(name: "Georgia", size: 14)
-		
 		dropDowns.forEach {
 			/*** FOR CUSTOM CELLS ***/
 			$0.cellNib = UINib(nibName: "MyCell", bundle: nil)
 			$0.customCellConfiguration = { (index: Index, item: String, cell: DropDownCell) -> Void in
 				guard let cell = cell as? MyCell else { return }
-				
 				// Setup your custom UI components
-				cell.suffixLabel.text = "Suffix \(index)"
+//                cell.suffixLabel.text = "Suffix \(index)";
+                cell.textLabel?.text = "\(index)";
+                
 			}
 			/*** ---------------- ***/
 		}

@@ -21,28 +21,27 @@
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="suffixLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ohS-96-iSV">
-                    <rect key="frame" x="106" y="9" width="84" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="0.66666668653488159" green="0.66666668653488159" blue="0.66666668653488159" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OlQ-5h-xXe">
+                    <rect key="frame" x="160" y="0.0" width="50" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="ILH-Mu-prD"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="VIB-Xt-ckX" secondAttribute="bottom" constant="10" id="0zj-tF-bzC"/>
-                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ohS-96-iSV" secondAttribute="trailing" constant="8" id="9Q3-yc-9aj"/>
-                <constraint firstItem="ohS-96-iSV" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="9" id="K4S-Hy-PP9"/>
+                <constraint firstAttribute="trailing" secondItem="OlQ-5h-xXe" secondAttribute="trailing" id="9xn-Og-FfI"/>
+                <constraint firstAttribute="bottom" secondItem="OlQ-5h-xXe" secondAttribute="bottom" id="Us8-zB-HJt"/>
                 <constraint firstItem="VIB-Xt-ckX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="ceQ-YZ-1ri"/>
                 <constraint firstItem="VIB-Xt-ckX" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="9" id="fWz-fu-Ghl"/>
-                <constraint firstAttribute="bottom" secondItem="ohS-96-iSV" secondAttribute="bottom" constant="10" id="iqG-w5-Bck"/>
-                <constraint firstItem="ohS-96-iSV" firstAttribute="leading" secondItem="VIB-Xt-ckX" secondAttribute="trailing" constant="8" id="jeo-I3-rzu"/>
+                <constraint firstItem="OlQ-5h-xXe" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="nJ9-tG-1ts"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="optionLabel" destination="VIB-Xt-ckX" id="RNH-YD-X7E"/>
-                <outlet property="suffixLabel" destination="ohS-96-iSV" id="srg-QB-s9S"/>
             </connections>
             <point key="canvasLocation" x="515" y="409"/>
         </view>
